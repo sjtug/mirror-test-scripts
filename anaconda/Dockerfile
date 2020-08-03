@@ -1,5 +1,5 @@
 FROM conda/miniconda3:latest
-MAINTAINER Alex Chi <iskyzh@gmail.com>
+LABEL maintainer="iskyzh@gmail.com"
 
 COPY .condarc /root
 COPY test.sh /root

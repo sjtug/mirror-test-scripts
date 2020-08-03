@@ -1,5 +1,5 @@
 FROM rust
-MAINTAINER Alex Chi <iskyzh@gmail.com>
+LABEL maintainer="iskyzh@gmail.com"
 
 COPY config /.cargo/
 COPY test.sh /root

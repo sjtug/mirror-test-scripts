@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  anaconda:
+    build: ./anaconda
+    image: sjtug/anaconda-test:1.0
+  cargo:
+    build: ./cargo
+    image: sjtug/cargo-test:1.0
+  mongodb:
+    build: ./mongodb
+    image: sjtug/mongodb-test:1.0
+  ubuntu:
+    build: ./ubuntu
+    image: sjtug/ubuntu-test:1.0
