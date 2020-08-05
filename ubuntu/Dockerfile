@@ -6,4 +6,4 @@ RUN sed -i 's/http:\/\/security.ubuntu.com/https:\/\/mirrors.sjtug.sjtu.edu.cn/g
 RUN cat /etc/apt/sources.list
 COPY test.sh /root
 
-ENTRYPOINT /root/test.sh
+CMD /root/test.sh
