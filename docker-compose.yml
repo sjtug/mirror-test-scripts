@@ -12,3 +12,6 @@ services:
   ubuntu:
     build: ./ubuntu
     image: sjtug/ubuntu-test:1.0
+  julia:
+    build: ./julia
+    image: sjtug/julia-test:1.0
