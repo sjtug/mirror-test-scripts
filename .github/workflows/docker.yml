@@ -7,3 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: docker-compose build
         run: docker-compose build
+      - name: test ostree
+        run: docker run -it sjtug/flatpak-test:1.0
