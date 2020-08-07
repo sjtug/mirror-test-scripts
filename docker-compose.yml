@@ -1,4 +1,4 @@
-version: "3.8"
+version: "2.3"
 services:
   anaconda:
     build: ./anaconda
@@ -15,3 +15,9 @@ services:
   julia:
     build: ./julia
     image: sjtug/julia-test:1.0
+  flatpak:
+    build: ./flatpak
+    image: sjtug/flatpak-test:1.0
+  archlinux:
+    build: ./archlinux
+    image: sjtug/archlinux-test:1.0
