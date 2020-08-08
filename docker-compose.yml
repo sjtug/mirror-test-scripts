@@ -21,3 +21,6 @@ services:
   archlinux:
     build: ./archlinux
     image: sjtug/archlinux-test:1.0
+  julia_with_conda:
+    build: ./julia_with_conda
+    image: sjtug/julia-conda-test:1.0
