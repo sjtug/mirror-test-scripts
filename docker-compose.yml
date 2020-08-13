@@ -24,3 +24,6 @@ services:
   julia_with_conda:
     build: ./julia_with_conda
     image: sjtug/julia-conda-test:1.0
+  rustup:
+    build: ./rustup
+    image: sjtug/rustup-test:1.0
