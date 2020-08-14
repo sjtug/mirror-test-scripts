@@ -27,3 +27,6 @@ services:
   rustup:
     build: ./rustup
     image: sjtug/rustup-test:1.0
+  emacs-elpa:
+    build: ./emacs-elpa
+    image: sjtug/emacs-elpa-test:1.0
