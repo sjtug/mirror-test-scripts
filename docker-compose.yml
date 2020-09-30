@@ -30,3 +30,6 @@ services:
   emacs-elpa:
     build: ./emacs-elpa
     image: sjtug/emacs-elpa-test:1.0
+  alpine:
+    build: ./alpine
+    image: sjtug/alpine-test:1.0
