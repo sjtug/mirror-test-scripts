@@ -33,3 +33,6 @@ services:
   alpine:
     build: ./alpine
     image: sjtug/alpine-test:1.0
+  opam:
+    build: ./opam
+    image: sjtug/opam-test:1.0
