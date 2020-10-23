@@ -36,3 +36,6 @@ services:
   opam:
     build: ./opam
     image: sjtug/opam-test:1.0
+  pypi:
+    build: ./pypi
+    image: sjtug/pypi-test:1.0
