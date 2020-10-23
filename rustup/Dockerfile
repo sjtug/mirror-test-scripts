@@ -1,8 +1,10 @@
-FROM alpine:latest
+FROM archlinux:latest
 LABEL maintainer="iskyzh@gmail.com"
 
-RUN sed -i 's/http:\/\/dl-cdn.alpinelinux.org/http:\/\/mirrors.sjtug.sjtu.edu.cn/g' /etc/apk/repositories
-RUN apk add curl bash
+ARG USE_SJTUG
+RUN if [ "$USE_SJTUG" = "TRUE" ] ; then echo "Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist ; fi
+
+RUN pacman -Syy --noconfirm curl
 ENV RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
 ENV RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 

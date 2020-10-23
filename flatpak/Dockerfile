@@ -1,8 +1,10 @@
 FROM debian
 LABEL maintainer="iskyzh@gmail.com"
 
-RUN apt update -y -qq && apt install ostree -y -qq
-RUN apt-get update -qq && apt-get install ca-certificates -y -qq
+ARG USE_SJTUG
+RUN if [ "$USE_SJTUG" = "TRUE" ] ; then sed -i 's/http:\/\/deb.debian.org/http:\/\/mirrors.sjtug.sjtu.edu.cn/g' /etc/apt/sources.list ; fi
+
+RUN apt-get update -y -qq && apt-get install ostree ca-certificates -y -qq
 
 WORKDIR /ostree-repo
 
