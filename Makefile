@@ -10,6 +10,7 @@ else
 endif
 
 test-docker:
+	docker image rm docker.mirrors.sjtug.sjtu.edu.cn/library/fedora || true
 	docker pull docker.mirrors.sjtug.sjtu.edu.cn/library/fedora
 
 build-%:
