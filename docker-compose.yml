@@ -39,3 +39,6 @@ services:
   pypi:
     build: ./pypi
     image: sjtug/pypi-test:1.0
+  dart:
+    build: ./dart
+    image: sjtug/dart-test:1.0
