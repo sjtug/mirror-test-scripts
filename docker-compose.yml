@@ -42,3 +42,9 @@ services:
   dart:
     build: ./dart
     image: sjtug/dart-test:1.0
+  fedora:
+    build: ./fedora
+    image: sjtug/fedora-test:1.0
+  centos:
+    build: ./centos
+    image: sjtug/centos-test:1.0
