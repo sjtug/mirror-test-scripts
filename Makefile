@@ -1,9 +1,9 @@
 test: test-opam test-pypi test-cargo test-anaconda test-julia test-mongodb
 
-BOOTSTRAP_WITH_SJTUG := FALSE
+USE_SJTUG := TRUE
 
 build-all:
-ifeq ($(BOOTSTRAP_WITH_SJTUG), TRUE)
+ifeq ($(USE_SJTUG), TRUE)
 	docker-compose build --build-arg USE_SJTUG=TRUE
 else
 	docker-compose build
@@ -18,7 +18,7 @@ test-gcr-io:
 	docker pull gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4
 
 build-%:
-ifeq ($(BOOTSTRAP_WITH_SJTUG), TRUE)
+ifeq ($(USE_SJTUG), TRUE)
 	docker-compose build --build-arg USE_SJTUG=TRUE $*
 else
 	docker-compose build $*
