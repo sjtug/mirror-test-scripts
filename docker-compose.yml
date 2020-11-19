@@ -54,3 +54,6 @@ services:
   rpmfusion:
     build: ./rpmfusion
     image: sjtug/rpmfusion-test:1.0
+  epel:
+    build: ./epel
+    image: sjtug/epel-test:1.0
