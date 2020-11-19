@@ -48,3 +48,9 @@ services:
   centos:
     build: ./centos
     image: sjtug/centos-test:1.0
+  openwrt:
+    build: ./openwrt
+    image: sjtug/openwrt-test:1.0
+  rpmfusion:
+    build: ./rpmfusion
+    image: sjtug/rpmfusion-test:1.0
