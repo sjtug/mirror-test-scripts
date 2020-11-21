@@ -57,3 +57,6 @@ services:
   epel:
     build: ./epel
     image: sjtug/epel-test:1.0
+  opensuse:
+    build: ./opensuse
+    image: sjtug/opensuse-test:1.0
