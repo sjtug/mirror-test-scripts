@@ -17,6 +17,10 @@ test-gcr-io:
 	docker image rm gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4 || true
 	docker pull gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4
 
+test-k8s:
+	./docker-clean-repo.sh docker.mirrors.internal.skyzh.xyz/echoserver || true
+	docker pull docker.mirrors.internal.skyzh.xyz/echoserver:1.10
+
 build-%:
 ifeq ($(USE_SJTUG), TRUE)
 	docker-compose build --build-arg USE_SJTUG=TRUE $*
