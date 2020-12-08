@@ -14,7 +14,7 @@ test-docker:
 	docker pull docker.mirrors.sjtug.sjtu.edu.cn/library/fedora:latest
 
 test-gcr-io:
-	./docker-clean-repo.sh k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn/echoserver || true
+	docker image rm k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn/echoserver:1.4 || true
 	docker pull k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn/echoserver:1.4
 
 build-%:
