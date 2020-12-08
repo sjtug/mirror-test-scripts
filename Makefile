@@ -14,8 +14,8 @@ test-docker:
 	docker pull docker.mirrors.sjtug.sjtu.edu.cn/library/fedora:latest
 
 test-gcr-io:
-	docker image rm gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4 || true
-	docker pull gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4
+	docker image rm k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn/echoserver:1.4 || true
+	docker pull k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn/echoserver:1.4
 
 build-%:
 ifeq ($(USE_SJTUG), TRUE)
