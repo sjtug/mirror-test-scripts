@@ -3,4 +3,4 @@
 set -e
 
 pip install -U pip --upgrade
-pip install -U numpy
+pip install -U numpy tensorflow
