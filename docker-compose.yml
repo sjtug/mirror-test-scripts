@@ -60,3 +60,6 @@ services:
   opensuse:
     build: ./opensuse
     image: sjtug/opensuse-test:1.0
+  guix:
+    build: ./guix
+    image: sjtug/guix-test:1.0
