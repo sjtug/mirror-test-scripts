@@ -15,9 +15,9 @@ services:
   julia:
     build: ./julia
     image: sjtug/julia-test:1.0
-  flatpak:
-    build: ./flatpak
-    image: sjtug/flatpak-test:1.0
+  flathub:
+    build: ./flathub
+    image: sjtug/flathub-test:1.0
   archlinux:
     build: ./archlinux
     image: sjtug/archlinux-test:1.0
@@ -63,3 +63,6 @@ services:
   guix:
     build: ./guix
     image: sjtug/guix-test:1.0
+  fedora-ostree:
+    build: ./fedora-ostree
+    image: sjtug/fedora-ostree-test:1.0
