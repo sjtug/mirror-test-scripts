@@ -1,15 +1,13 @@
-FROM debian:buster
+FROM archlinux:latest
 LABEL maintainer="iskyzh@gmail.com"
 
 ARG USE_SJTUG
+RUN if [ "$USE_SJTUG" = "true" ] ; then echo "Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist ; fi
 
-RUN if [ "$USE_SJTUG" = "true" ] ; then sed -i 's/http:\/\/deb.debian.org/http:\/\/mirrors.sjtug.sjtu.edu.cn/g' /etc/apt/sources.list ; fi
-RUN if [ "$USE_SJTUG" = "true" ] ; then sed -i 's/http:\/\/security.debian.org/http:\/\/ftp.sjtu.edu.cn/g' /etc/apt/sources.list ; fi
-
-RUN cat /etc/apt/sources.list
-RUN apt-get update -y -qq && apt-get install flatpak ca-certificates -y -qq
+RUN pacman -Syy --noconfirm flatpak
 RUN flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-RUN flatpak remote-modify flathub --url=https://mirrors.sjtug.sjtu.edu.cn/flathub
+RUN flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub
+ENV FLATPAK_GL_DRIVERS=dummy
 
 COPY test.sh /root
 CMD /root/test.sh

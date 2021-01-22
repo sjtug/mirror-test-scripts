@@ -12,7 +12,7 @@ RUN apt-get update -y -qq && apt-get install ostree ca-certificates -y -qq
 WORKDIR /ostree-repo
 
 RUN ostree init --repo=/ostree-repo --mode=bare-user
-RUN ostree remote add --repo=/ostree-repo --no-gpg-verify fedora https://mirrors.sjtug.sjtu.edu.cn/fedora-ostree
+RUN ostree remote add --repo=/ostree-repo --no-gpg-verify fedora https://mirror.sjtu.edu.cn/fedora-ostree
 
 COPY test.sh /root
 CMD /root/test.sh
