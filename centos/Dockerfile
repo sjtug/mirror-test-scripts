@@ -1,6 +1,5 @@
 FROM centos:latest
 
-RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/*
-RUN sed -i 's|#baseurl=http://mirror.centos.org/|baseurl=http://mirrors.sjtug.sjtu.edu.cn/|g' /etc/yum.repos.d/*
+RUN sed -e 's/mirrorlist/#mirrorlist/g' -e 's|#baseurl=http://mirror.centos.org/|baseurl=http://mirror.sjtu.edu.cn/|g' -i.bak /etc/yum.repos.d/*
 
 CMD dnf makecache && yum -y install vim

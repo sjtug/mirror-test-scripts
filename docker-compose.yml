@@ -68,10 +68,13 @@ services:
     image: sjtug/fedora-ostree-test:1.0
   pytorch:
     image: python:3.8
-    command: pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://siyuan.internal.sjtug.org/pytorch-wheels/torch_stable.html
+    command: pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://mirror.sjtu.edu.cn/pytorch-wheels/torch_stable.html
   debian:
     build: ./debian
     image: sjtug/debian-test:1.0
   flutter:
     build: ./flutter
     image: sjtug/flutter-test:1.0
+  nixos:
+    build: ./nixos
+    image: sjtug/nixos-test:1.0
