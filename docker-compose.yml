@@ -78,3 +78,6 @@ services:
   nixos:
     build: ./nixos
     image: sjtug/nixos-test:1.0
+  voidlinux:
+    build: ./voidlinux
+    image: sjtug/voidlinux-test:1.0
