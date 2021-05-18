@@ -6,4 +6,4 @@ custom_channels:
   pytorch: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/
 channels:
   - defaults
-how_channel_urls: true
+show_channel_urls: true
